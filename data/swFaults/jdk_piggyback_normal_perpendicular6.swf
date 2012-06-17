@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="3">
+<swFault class_id="0" tracking_level="0" version="3">
+	<name>jdk_piggyback_normal_perpendicular6</name>
+	<lineColor_r>0.64999998</lineColor_r>
+	<lineColor_g>0</lineColor_g>
+	<lineColor_b>0</lineColor_b>
+	<lineColor_a>1</lineColor_a>
+	<lineWidth>1</lineWidth>
+	<segments class_id="1" tracking_level="0" version="0">
+		<count>4</count>
+		<item class_id="2" tracking_level="1" version="2" object_id="_0">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates class_id="3" tracking_level="0" version="0">
+				<count>2</count>
+				<item class_id="4" tracking_level="0" version="0">
+					<x>2428</x>
+					<y>5192.8467</y>
+					<z>2797.1953</z>
+				</item>
+				<item>
+					<x>2428</x>
+					<y>5199.8467</y>
+					<z>2924.5918</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_1">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2430</x>
+					<y>5193.0801</y>
+					<z>2810.5811</z>
+				</item>
+				<item>
+					<x>2430.0022</x>
+					<y>5199.1069</y>
+					<z>2926.4707</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_2">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2433</x>
+					<y>5191.6978</y>
+					<z>2811.4404</z>
+				</item>
+				<item>
+					<x>2432.998</x>
+					<y>5198.1865</y>
+					<z>2916.3848</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_3">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2436.0017</x>
+					<y>5191.7461</y>
+					<z>2830.9785</z>
+				</item>
+				<item>
+					<x>2435.9973</x>
+					<y>5196.4316</y>
+					<z>2897.3457</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+	</segments>
+</swFault>

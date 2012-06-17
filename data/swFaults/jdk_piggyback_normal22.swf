@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="3">
+<swFault class_id="0" tracking_level="0" version="3">
+	<name>jdk_piggyback_normal22</name>
+	<lineColor_r>1</lineColor_r>
+	<lineColor_g>0</lineColor_g>
+	<lineColor_b>0</lineColor_b>
+	<lineColor_a>1</lineColor_a>
+	<lineWidth>1</lineWidth>
+	<segments class_id="1" tracking_level="0" version="0">
+		<count>5</count>
+		<item class_id="2" tracking_level="1" version="2" object_id="_0">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates class_id="3" tracking_level="0" version="0">
+				<count>2</count>
+				<item class_id="4" tracking_level="0" version="0">
+					<x>2544.085</x>
+					<y>5043</y>
+					<z>3041.0352</z>
+				</item>
+				<item>
+					<x>2553.7422</x>
+					<y>5042.9995</y>
+					<z>3303.2988</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_1">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2546.8511</x>
+					<y>5040</y>
+					<z>3046.0645</z>
+				</item>
+				<item>
+					<x>2558.1685</x>
+					<y>5039.9922</y>
+					<z>3337.1953</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_2">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2549.4985</x>
+					<y>5037</y>
+					<z>3064.8711</z>
+				</item>
+				<item>
+					<x>2560.6272</x>
+					<y>5036.9971</y>
+					<z>3347.9639</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_3">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2551.4238</x>
+					<y>5033.9951</y>
+					<z>3055.1074</z>
+				</item>
+				<item>
+					<x>2563.4487</x>
+					<y>5034</y>
+					<z>3324.1504</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_4">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2553.5117</x>
+					<y>5031</y>
+					<z>3059.9697</z>
+				</item>
+				<item>
+					<x>2565.0967</x>
+					<y>5031.001</y>
+					<z>3339.8984</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+	</segments>
+</swFault>

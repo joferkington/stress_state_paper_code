@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="3">
+<swFault class_id="0" tracking_level="0" version="3">
+	<name>jdk_piggyback_normal_perpendicular4</name>
+	<lineColor_r>0.64999998</lineColor_r>
+	<lineColor_g>0</lineColor_g>
+	<lineColor_b>0</lineColor_b>
+	<lineColor_a>1</lineColor_a>
+	<lineWidth>1</lineWidth>
+	<segments class_id="1" tracking_level="0" version="0">
+		<count>4</count>
+		<item class_id="2" tracking_level="1" version="2" object_id="_0">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates class_id="3" tracking_level="0" version="0">
+				<count>2</count>
+				<item class_id="4" tracking_level="0" version="0">
+					<x>2410</x>
+					<y>5183.7158</y>
+					<z>2818.5371</z>
+				</item>
+				<item>
+					<x>2409.999</x>
+					<y>5190.1191</y>
+					<z>2934.8096</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_1">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2412</x>
+					<y>5184.2314</y>
+					<z>2819.1621</z>
+				</item>
+				<item>
+					<x>2412</x>
+					<y>5191.209</y>
+					<z>2938.1914</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_2">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2407.9983</x>
+					<y>5182.3867</y>
+					<z>2835.1953</z>
+				</item>
+				<item>
+					<x>2407.9985</x>
+					<y>5189.0518</y>
+					<z>2938.5195</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_3">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2405.9983</x>
+					<y>5184.1104</y>
+					<z>2867.1104</z>
+				</item>
+				<item>
+					<x>2406</x>
+					<y>5189.8574</y>
+					<z>2947.084</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+	</segments>
+</swFault>

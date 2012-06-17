@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="3">
+<swFault class_id="0" tracking_level="0" version="3">
+	<name>jdk_piggyback_normal2</name>
+	<lineColor_r>0.27462494</lineColor_r>
+	<lineColor_g>0</lineColor_g>
+	<lineColor_b>0</lineColor_b>
+	<lineColor_a>1</lineColor_a>
+	<lineWidth>1</lineWidth>
+	<segments class_id="1" tracking_level="0" version="0">
+		<count>4</count>
+		<item class_id="2" tracking_level="1" version="2" object_id="_0">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates class_id="3" tracking_level="0" version="0">
+				<count>3</count>
+				<item class_id="4" tracking_level="0" version="0">
+					<x>2641.2422</x>
+					<y>5113.002</y>
+					<z>2905.1172</z>
+				</item>
+				<item>
+					<x>2645.1458</x>
+					<y>5113.0059</y>
+					<z>3025.4893</z>
+				</item>
+				<item>
+					<x>2649.9475</x>
+					<y>5112.9961</y>
+					<z>3183.5801</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_1">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>3</count>
+				<item>
+					<x>2643.283</x>
+					<y>5107</y>
+					<z>2933.8359</z>
+				</item>
+				<item>
+					<x>2647.7185</x>
+					<y>5107.0059</y>
+					<z>3081.8604</z>
+				</item>
+				<item>
+					<x>2649.5786</x>
+					<y>5106.9941</y>
+					<z>3172.2285</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_2">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>3</count>
+				<item>
+					<x>2640.3748</x>
+					<y>5125</y>
+					<z>2903.3389</z>
+				</item>
+				<item>
+					<x>2644.7126</x>
+					<y>5125.0039</y>
+					<z>3049.2168</z>
+				</item>
+				<item>
+					<x>2647.3464</x>
+					<y>5124.9946</y>
+					<z>3124.4873</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_3">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2633.8022</x>
+					<y>5141.0024</y>
+					<z>2897.293</z>
+				</item>
+				<item>
+					<x>2640.9575</x>
+					<y>5140.9951</y>
+					<z>3051.7051</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+	</segments>
+</swFault>

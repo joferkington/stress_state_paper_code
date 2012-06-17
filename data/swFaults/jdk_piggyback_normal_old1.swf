@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="3">
+<swFault class_id="0" tracking_level="0" version="3">
+	<name>jdk_piggyback_normal_old1</name>
+	<lineColor_r>1</lineColor_r>
+	<lineColor_g>0</lineColor_g>
+	<lineColor_b>0</lineColor_b>
+	<lineColor_a>1</lineColor_a>
+	<lineWidth>1</lineWidth>
+	<segments class_id="1" tracking_level="0" version="0">
+		<count>7</count>
+		<item class_id="2" tracking_level="1" version="2" object_id="_0">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates class_id="3" tracking_level="0" version="0">
+				<count>2</count>
+				<item class_id="4" tracking_level="0" version="0">
+					<x>2541.002</x>
+					<y>5268.3257</y>
+					<z>2923.4355</z>
+				</item>
+				<item>
+					<x>2540.9978</x>
+					<y>5274.0957</y>
+					<z>3106.0762</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_1">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2538.0024</x>
+					<y>5269.2959</y>
+					<z>2916.4717</z>
+				</item>
+				<item>
+					<x>2537.9966</x>
+					<y>5274.9521</y>
+					<z>3097.2207</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_2">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2535</x>
+					<y>5269.5503</y>
+					<z>2892.7168</z>
+				</item>
+				<item>
+					<x>2534.998</x>
+					<y>5275.6445</y>
+					<z>3072.5635</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_3">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2530.9988</x>
+					<y>5272.7715</y>
+					<z>2850.499</z>
+				</item>
+				<item>
+					<x>2530.9978</x>
+					<y>5280.1758</y>
+					<z>3044.0801</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_4">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2527.9998</x>
+					<y>5273.6025</y>
+					<z>2833.582</z>
+				</item>
+				<item>
+					<x>2528.0017</x>
+					<y>5280.5439</y>
+					<z>3027.5312</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_5">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2525</x>
+					<y>5276.0547</y>
+					<z>2839.0703</z>
+				</item>
+				<item>
+					<x>2525.0015</x>
+					<y>5283.3594</y>
+					<z>3024.5605</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+		<item class_id_reference="2" object_id="_6">
+			<SWSegID>2147483647</SWSegID>
+			<Project_Coordinates>
+				<count>2</count>
+				<item>
+					<x>2522</x>
+					<y>5277.1777</y>
+					<z>2834.0947</z>
+				</item>
+				<item>
+					<x>2522.002</x>
+					<y>5286.0371</y>
+					<z>3016.0205</z>
+				</item>
+			</Project_Coordinates>
+		</item>
+	</segments>
+</swFault>
