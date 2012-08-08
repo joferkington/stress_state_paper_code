@@ -1,4 +1,5 @@
 import numpy as np
+from mplstereonet import stereonet_math
 
 #-- Conversions from strike/dip or plunge/bearing to a vector -----------------
 def normalize(*args):
@@ -15,28 +16,6 @@ def normalize(*args):
     else:
         raise ValueError('Invalid number of input arguments')
 
-def vector2plunge_bearing(x,y,z):
-    x, y, z = map(np.asarray, [x,y,z])
-    if x.size == 1:
-        x, y, z = x.reshape(-1), y.reshape(-1), z.reshape(-1)
-
-    x,y,z = normalize(x,y,z)
-    plunge = np.degrees(np.arcsin(z))
-    bearing = np.degrees(np.arctan2(y, x))
-
-    # Rotate bearing so that 0 is north instead of east
-    bearing = 90-bearing
-    bearing[bearing < 0] += 360
-
-    # If the plunge angle is upwards, get the opposite end of the line
-    filter = plunge < 0
-    plunge[filter] *= -1
-    bearing[filter] -= 180
-
-    bearing[bearing < 0] += 360
-
-    return plunge, bearing
-
 def normal2plane(x,y,z):
     """Converts a normal vector to a plane (given as x,y,z)
     to a strike and dip of the plane using the Right-Hand-Rule.
@@ -49,7 +28,7 @@ def normal2plane(x,y,z):
         dip: The dip of the plane, in degrees downward from horizontal
     """
     # Convert the normal of the plane to a plunge/bearing
-    plunge, bearing = vector2plunge_bearing(x, y, z)
+    plunge, bearing = stereonet_math.vector2plunge_bearing(x, y, z)
 
     # Now convert the plunge/bearing of the pole to the plane that it represents
     strike = bearing+90

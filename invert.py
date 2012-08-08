@@ -205,7 +205,7 @@ def principal(sigma):
     vecs = vecs[:, order]
     vals = vals[order]
 
-    func = geometric_functions.vector2plunge_bearing
+    func = mplstereonet.vector2plunge_bearing
     vec_orientations = [func(*item) for item in vecs.T]
 
     """

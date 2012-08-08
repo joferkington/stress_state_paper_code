@@ -1,3 +1,10 @@
+"""
+Plots density contour plots of poles to plane for each triangle of each fault
+in each fault population.  
+
+Modes of each fault population are determined through a modified K-means 
+approach (see `fit_fault_set`, `fit_bimodal`, and `fit_bimodal_bidirectional`).
+"""
 import numpy as np
 import scipy.cluster
 
@@ -33,7 +40,10 @@ def fit_fault_set(faults, split_axis=1, title='Poles to Planes'):
     strikes_dips = fit_bimodal_bidirectional(normals, split_axis=split_axis)
 
     fig, ax = plt.subplots(subplot_kw=dict(projection='stereonet'))
-    ax.density_contourf(*smath.normal2pole(*normals.T))
+    strike, dip = smath.vector2pole(*normals.T)
+    ax.density_contourf(strike, dip)
+#    ax.pole(strike, dip, 'ko', markersize=2)
+
 
     conj = []
     for sd, color in zip(strikes_dips, ['r', 'g']):
@@ -59,7 +69,7 @@ def fit_bimodal(normals, weights=None, k=2):
         weighted_normals = normals
     modes = [weighted_normals[mode==i] for i in range(k)]
 
-    return (smath.normal2pole(*mode.mean(axis=0)) for mode in modes)
+    return (smath.vector2pole(*mode.mean(axis=0)) for mode in modes)
 
 def fit_bimodal_bidirectional(normals, weights=None, split_axis=1):
     """Similar to "fit_bimodal", but each vector is assumed to represent a
@@ -84,7 +94,6 @@ def fit_bimodal_bidirectional(normals, weights=None, split_axis=1):
         weights = weights[pca[:,split_axis] > 0]
 
     return fit_bimodal(normals, weights)
-
 
 if __name__ == '__main__':
     main()

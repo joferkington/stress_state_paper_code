@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-import geoprobe
 import mplstereonet
-from mplstereonet.stereonet_math import normal2pole
+from mplstereonet import vector2pole
 
 import swfault_vectors
 import invert
@@ -90,8 +89,10 @@ def invert_vectors(normals, slips, areas, nfaults):
     return fig
 
 def plot(sigma, normals, nfaults):
+    """Produces a contoured density plot of poles to planes for each triangle
+    of each fault with the principal stress axes from the inversion labeled."""
     nplanes = normals.shape[0]
-    strikes, dips = normal2pole(*normals.T)
+    strikes, dips = vector2pole(*normals.T)
     values, vectors = invert.principal(sigma)
 
     fig = plt.figure()
