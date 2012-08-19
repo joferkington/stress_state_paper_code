@@ -16,34 +16,41 @@ import fault_populations as populations
 from swfault_vectors import normals as normal_vecs
 
 def main():
-    fig = fit_fault_set(populations.main_normal_faults(),
-            title='Main Normal Fault Population Conjugates')
-    fig.savefig('MainNormalFaultConjugates.pdf')
+    fig, axes = plt.subplots(ncols=3, figsize=(24, 6), 
+                    subplot_kw=dict(projection='stereonet'))
 
-    fig = fit_fault_set(populations.strike_slip_faults(), split_axis=0,
-            title='Strike-slip Fault Population Conjugates')
-    fig.savefig('StrikeslipFaultConjugates.pdf')
+    fit_fault_set(axes[0], populations.main_normal_faults(),
+            title='A) Main Normal Fault Population')
 
-    fig = fit_fault_set(populations.sec_normal_faults(),
-            title='Secondary Normal Fault Population Conjugates')
-    fig.savefig('SecNormalFaultConjugates.pdf')
+    fit_fault_set(axes[1], populations.strike_slip_faults(), split_axis=0,
+            title='B) Strike-slip Fault Population')
+
+    fit_fault_set(axes[2], populations.sec_normal_faults(),
+            title='C) Secondary Normal Fault Population')
+
+    fig.savefig('FaultPopulationsPlot.pdf')
 
     plt.show()
 
-def fit_fault_set(faults, split_axis=1, title='Poles to Planes'):
+def fit_fault_set(ax, faults, split_axis=1, title='Poles to Planes'):
     """Given a sequence of swfaults representing a bi-modal distribution, fit
     a plane to each of the modes."""
     vol = populations.vol
+    faults = list(faults)
+    numfaults = len(faults)
+
     normals = [norm for fault in faults for norm in normal_vecs(fault, vol)]
+    numvecs = len(normals)
     normals = np.array(normals)
 
     strikes_dips = fit_bimodal_bidirectional(normals, split_axis=split_axis)
 
-    fig, ax = plt.subplots(subplot_kw=dict(projection='stereonet'))
     strike, dip = smath.vector2pole(*normals.T)
-    ax.density_contourf(strike, dip)
-#    ax.pole(strike, dip, 'ko', markersize=2)
-
+    ax.pole(strike, dip, 'ko', markersize=2, alpha=0.5)
+    cax = ax.density_contourf(strike, dip, sigma=3)
+    ax.density_contour(strike, dip, linewidths=2, sigma=3)
+    cbar = ax.figure.colorbar(cax, ax=ax)
+    cbar.set_label('Number of standard deviations', rotation=-90)
 
     conj = []
     for sd, color in zip(strikes_dips, ['r', 'g']):
@@ -51,9 +58,11 @@ def fit_fault_set(faults, split_axis=1, title='Poles to Planes'):
         ax.plane(*sd, color=color, lw=2)
         conj.append(u'%0.0f\u00b0/%0.0f\u00b0' % sd)
     ax.set_azimuth_ticks([])
-    ax.grid(True)
-    ax.set_title(title + '\n' + ' and '.join(conj), y=-0.05, va='top')
-    return fig
+#    ax.grid(True)
+    ax.set_title(title + '\n' + ' and '.join(conj), y=1.0, va='bottom')
+    ax.annotate('{} planes from {} faults'.format(numvecs, numfaults), 
+            xy=(0.5, 0), xytext=(0, -12), xycoords='axes fraction', 
+            textcoords='offset points', ha='center', va='top')
 
 def fit_bimodal(normals, weights=None, k=2):
     """Given a set of vectors, find the resultant vector of two modes using
