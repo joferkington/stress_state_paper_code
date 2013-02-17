@@ -1,3 +1,5 @@
+"""Utility code to convert normal vectors to slip vectors for a given fault 
+type."""
 import numpy as np
 from mplstereonet import stereonet_math
 

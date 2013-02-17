@@ -1,10 +1,9 @@
+"""Reads triangles of a geoprobe swfault within a non-convex hull of the 
+fault's outline."""
 import numpy as np
 from shapely.geometry import Polygon
 from matplotlib.delaunay import Triangulation
-import matplotlib.pyplot as plt
-
 import geoprobe
-import mplstereonet
 
 def triangles(fault, vol):
     if isinstance(fault, basestring):

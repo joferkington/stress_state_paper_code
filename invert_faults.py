@@ -1,3 +1,8 @@
+"""
+Inverts observed fault plane data for principal stress orientations using
+Michael (1984)'s method. Uses each triangle of interpreted fault surfaces as
+an independent fault and assumes pure dip or strike slip.
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -11,6 +16,8 @@ import geometric_functions
 import fault_populations as populations
 
 def main():
+    """Invert observed fault plane data (from geoprobe faults) assuming pure
+    dip-slip."""
     def title(text):
         plt.title(text, y=-0.025, va='top', size=24)
 
@@ -33,10 +40,12 @@ def main():
     plt.show()
 
 def invert_normal_population(faults):
+    """Invert only normal faults."""
     slip_func = geometric_functions.normal_slip
     return invert_vectors(*build_vectors(faults, slip_func))
 
 def invert_strikeslip_population():
+    """Invert only strike/slip faults."""
     fault_pops = [populations.left_lateral_faults(), 
                   populations.right_lateral_faults()]
     slip_funcs = [geometric_functions.left_slip, 
@@ -44,6 +53,7 @@ def invert_strikeslip_population():
     return invert_multiple_populations(fault_pops, slip_funcs)
 
 def invert_all():
+    """Invert both strike/slip and normal faults."""
     fault_pops = [populations.left_lateral_faults(), 
                   populations.right_lateral_faults(),
                   populations.main_normal_faults()]
